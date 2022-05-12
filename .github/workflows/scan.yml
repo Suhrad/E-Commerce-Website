@@ -1,3 +1,5 @@
+on: [push]
+
 steps:
   - name: ZAP Scan
     uses: zaproxy/action-full-scan@v0.3.0
