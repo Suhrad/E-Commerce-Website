@@ -1,15 +1,15 @@
 
-name: zapapi-scan
+name: API-SCAN
 
 on: [push]
 
 jobs:
-  build:
+  API-SCAN:
     runs-on: ubuntu-latest
     steps:     
-    - name: ZAP Scan
+    - name: API-SCAN
       uses: zaproxy/action-api-scan@v0.1.0
       with:
         docker_name: 'owasp/zap2docker-stable'
         format: openapi
-        target: "https://cerebro.probo.in/categories"
+        target: "https://cerebro.probo.in/"
