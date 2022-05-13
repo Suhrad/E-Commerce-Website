@@ -1,0 +1,15 @@
+
+name: zapapi-scan
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:     
+    - name: ZAP Scan
+      uses: zaproxy/action-api-scan@v0.1.0
+      with:
+        docker_name: 'owasp/zap2docker-stable'
+        format: openapi
+        target: "http://dev.dashboard.probo.in/categories/add"
