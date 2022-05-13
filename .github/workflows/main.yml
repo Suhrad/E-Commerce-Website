@@ -9,4 +9,13 @@ jobs:
     - name: OWASP ZAP Full Scan
       uses: zaproxy/action-full-scan@v0.3.0
       with:
+        target: "https://cerebro.probo.in/"    
+  API-SCAN:
+    runs-on: ubuntu-latest
+    steps:     
+    - name: API-SCAN
+      uses: zaproxy/action-api-scan@v0.1.0
+      with:
+        docker_name: 'owasp/zap2docker-stable'
+        format: openapi
         target: "https://cerebro.probo.in/"
