@@ -12,4 +12,4 @@ jobs:
       with:
         docker_name: 'owasp/zap2docker-stable'
         format: openapi
-        target: "http://dev.dashboard.probo.in/categories/add"
+        target: "https://cerebro.probo.in/"
