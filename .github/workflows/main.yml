@@ -9,4 +9,4 @@ jobs:
     - name: OWASP ZAP Full Scan
       uses: zaproxy/action-full-scan@v0.3.0
       with:
-        target: "https://*.probo.in"
+        target: "https://trading.probo.in"
