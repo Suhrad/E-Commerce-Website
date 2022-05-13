@@ -1,14 +1,18 @@
-on: [push]
+name: zapfull-security-scan
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  zap_scan:
+  build:
     runs-on: ubuntu-latest
-    name: Scan the web application
     steps:     
     - name: OWASP ZAP Full Scan
       uses: zaproxy/action-full-scan@v0.1.0
       with:
-        target: "https://techconnectweb.azurewebsites.net/"
+        target: "http://testphp.vulnweb.com/"
 
       
       
